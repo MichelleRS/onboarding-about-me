@@ -1,15 +1,18 @@
 :root {
-    --background: rgb(224, 234, 247);
+    --background: hsl(30, 100%, 97%);
     --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    --heading-font: 'Corben', 'Courier New', Courier, monospace;
+    --primary-font: 'Courier New', Courier, monospace;
 }
 
 body {
     font-family: var(--primary-font);
+    font-size: 1.25rem;
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+    max-width: 800px;
+    margin: auto;
 }
 
 header {
@@ -21,15 +24,29 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-header .logo {
-    height: 100%;
 }
 
 main {
     padding: 20px;
+}
+
+/* elements */
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+img {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+main > p {
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 12px 12px 2px 1px hsla(30, 100%, 70%, 0.2);
 }
